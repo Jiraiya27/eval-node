@@ -48,7 +48,7 @@ const questions = [
     <p>กดปุ่ม <code>Run</code> เพื่อดูเวลาพิมพ์ตัวแปรชนิดต่างๆลง console หน้าตาเป็นไงนะจ๊ะ</p>
     `,
     haveQuestion: true,
-    editorText: `console.log(“ลุงตู่ อายุ”);
+    editorText: `console.log("ลุงตู่ อายุ");
     console.log(64);
     console.log(true);    
     `

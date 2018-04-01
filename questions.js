@@ -85,14 +85,14 @@ function handleOperators(code) {
 }
 
 function handleConditions(code) {
-  const result = evalCode(code)
-
-  if (result.code !== 0) {
-    return errorResponse(result.stderr)
+  const predefinedResult = 'varx=44if(x==44)alert(“ลุงตู่มาแล้ว!!!”)elseconsole.log(“ลุงตู่ไปแล้ว!!!”)'
+  const filterRegex = /(?=\/.*).*|{|}|\r|\n|\s|;/g
+  const filtered = code.replace(filterRegex, '')
+  if (filtered == predefinedResult) {
+    return { success: true, message: 'ดีใจด้วย คุณเข้าใจ If/Else แล้ว!', stdout: '', stderr: '' }
+  } else {
+    return { success: false, message: 'คำตอบยังไม่ถูกต้อง', stdout: '', stderr: '' }
   }
-
-  const logs = result.stdout.split('\n')
-
 }
 
 function surroundWithTryCatch(code) {
