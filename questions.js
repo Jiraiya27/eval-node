@@ -72,7 +72,7 @@ function handleOperators(code) {
     stdout: result.stdout,
     stderr: ''
   }
-  for (let i = 0; i < logs.length; i++) {
+  for (let i = 0; i < logs.length - 1; i++) {
     if (Number(logs[i]) !== checkResult[i]) {
       response.success = false
       response.message = `คำตอบยังไม่ถูกต้อง`
