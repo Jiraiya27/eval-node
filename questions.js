@@ -99,7 +99,8 @@ function handleConditions(code) {
   if (filtered == predefinedResult) {
     return { success: true, message: 'ดีใจด้วย คุณเข้าใจ If/Else แล้ว!', stdout: '', stderr: '' }
   } else {
-    return { success: false, message: 'คำตอบยังไม่ถูกต้อง', stdout: '', stderr: '' }
+    const result = evalCode(code)
+    return { success: false, message: 'คำตอบยังไม่ถูกต้อง', stdout: result.stdout, stderr: result.stderr }
   }
 }
 
