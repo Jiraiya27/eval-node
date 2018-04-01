@@ -54,7 +54,7 @@ function handleDataTypes(code) {
 }
 
 function handleOperators(code) {
-  const result = eval(code)
+  const result = evalCode(code)
 
   if (result.code !== 0) {
     return errorResponse(result.stderr)
