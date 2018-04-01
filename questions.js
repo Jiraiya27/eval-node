@@ -85,7 +85,7 @@ function handleOperators(code) {
 }
 
 function handleConditions(code) {
-  const predefinedResult = 'varx=44if(x==44)alert(“ลุงตู่มาแล้ว!!!”)elseconsole.log(“ลุงตู่ไปแล้ว!!!”)'
+  const predefinedResult = 'varx=44if(x==44)alert("ลุงตู่มาแล้ว!!!")elseconsole.log("ลุงตู่ไปแล้ว!!!")'
   const filterRegex = /(?=\/.*).*|{|}|\r|\n|\s|;/g
   const filtered = code.replace(filterRegex, '')
   if (filtered == predefinedResult) {
