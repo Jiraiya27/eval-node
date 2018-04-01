@@ -66,6 +66,14 @@ function handleOperators(code) {
     '2': 20,
     '3': 2
   }
+  if (logs.length < 4) {
+    return { 
+      success: false,
+      message: `คำตอบยังไม่ถูกต้อง`,
+      stdout:result.stdout,
+      stderr:result.stderr
+    }
+  }
   let response = {
     success: true,
     message: 'ดีใจด้วย คุณเข้าใจ Operators แล้ว',
