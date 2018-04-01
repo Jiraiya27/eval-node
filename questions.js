@@ -128,7 +128,7 @@ function errorResponse(stderr) {
 
 function handleEval(code, question) {
   switch (Number(question)) {
-    case 2:
+    case 1:
       return handleConsoleLog(code);
     case 3:
       return handleDataTypes(code);
