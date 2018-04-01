@@ -11,7 +11,7 @@ function handleConsoleLog(code) {
   } else {
     const logs = result.stdout.split('\n')
     const logsWithoutEmpty = logs.filter(log => log)
-    if (logs.length < 2) {
+    if (logsWithoutEmpty.length < 2) {
       return { success: false, message: 'ลอง console.log เพิ่มตามคำสั่งนะครับ',
               stdout: result.stdout, stderr: result.stderr }
     }
