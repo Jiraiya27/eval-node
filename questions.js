@@ -9,6 +9,12 @@ function handleConsoleLog(code) {
   if (result.code !== 0) {
     return errorResponse(result.stderr)
   } else {
+    const logs = result.stdout.split('\n')
+    const logsWithoutEmpty = logs.filter(log => log)
+    if (logs.length < 2) {
+      return { success: false, message: 'ลอง console.log เพิ่มตามคำสั่งนะครับ',
+              stdout: result.stdout, stderr: result.stderr }
+    }
     return { success: true, message: 'ดีใจด้วย คุณเข้าใจ Console แล้ว', 
             stdout: result.stdout, stderr: result.stderr }
   }
