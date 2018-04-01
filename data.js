@@ -86,12 +86,7 @@ const questions = [
     <p>(จำนวนที่มีอยู่ <code>+ 5 * 12</code>) = จำนวนปัจจุบัน</p>
     `,
     haveQuestion: false,
-    editorText: `
-    console.log(2+3);
-    console.log(15-5);
-    console.log(5*4);
-    console.log(4/2);
-    `
+    editorText: ``
   },
   {
     id: 6,
