@@ -92,6 +92,7 @@ function handleConditions(code) {
   }
 
   const logs = result.stdout.split('\n')
+
 }
 
 function surroundWithTryCatch(code) {
@@ -127,13 +128,13 @@ function errorResponse(stderr) {
 
 function handleEval(code, question) {
   switch (Number(question)) {
-    case 1:
-      return handleConsoleLog(code);
     case 2:
-      return handleDataTypes(code);
+      return handleConsoleLog(code);
     case 3:
+      return handleDataTypes(code);
+    case 4:
       return handleOperators(code);
-    case 4: 
+    case 7: 
       return handleConditions(code);
     default:
       break;
